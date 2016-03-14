@@ -54,11 +54,50 @@ public class DrawDemo
      */
     public void drawTriangle(int x, int y){
         Pen pen = new Pen(x,y,myCanvas);
-        pen.setColor(Color.BLUE);
+        pen.setColor(Color.GREEN);
 
         for (int i = 0; i < 3; i++){
             pen.move(x/2);
             pen.turn(120);
+        }
+    }
+    
+    /**
+     * Draw a pentagon
+     */
+    public void drawPentagon(){
+        Pen pen = new Pen(150,120,myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i = 0; i < 5; i++){
+            pen.move(60);
+            pen.turn(360/5);
+        }
+    }
+    
+    /**
+     * Dibuja un poligono con un numero de lados dado por parametro
+     */
+    public void drawPoligono(int lados){
+        Pen pen = new Pen(150,120,myCanvas);
+        pen.setColor(Color.BLUE);
+
+        for (int i = 0; i < lados; i++){
+            pen.move(60);
+            pen.turn(360/lados);
+        }
+    }
+    
+    /**
+     * Draw a spiral
+     */
+    public void drawSpiral(){
+        Pen pen = new Pen(150,120,myCanvas);
+        pen.setColor(Color.BLACK);
+        int lado = 5;
+        for (int i = 0; i < 100; i++){
+            pen.move(lado+=2);
+            pen.turn(90);
         }
     }
 
